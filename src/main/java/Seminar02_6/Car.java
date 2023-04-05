@@ -14,10 +14,12 @@ public abstract class Car {
     }
 
     public int getMaxSpeed() {
+
         return maxSpeed;
     }
 
     public void setModel(String model) {
+
         this.model = model;
     }
 
