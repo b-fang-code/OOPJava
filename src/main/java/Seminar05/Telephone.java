@@ -39,6 +39,30 @@ public class Telephone {
 
     }
 
+    public void setLabel(String label) {
+        this.label = label;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setDisplaySize(double displaySize) {
+        this.displaySize = displaySize;
+    }
+
+    public void setBatteryCapacity(int batteryCapacity) {
+        this.batteryCapacity = batteryCapacity;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setTypeOs(String typeOs) {
+        TypeOs = typeOs;
+    }
+
     public Telephone(String label, String model, double displaySize, int batteryCapacity, double price, String typeOs) {
         this.label = label;
         this.model = model;

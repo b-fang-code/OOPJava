@@ -11,7 +11,7 @@ public class Shop implements CreateTelephone, SellTelephone, AddPhone {
     public ArrayList<Telephone> create(ArrayList<Telephone> listTelephone) {
 
 
-        Telephone nokia = new Telephone("Nikia", "N95", 6.12, 3000,
+        Telephone nokia = new Telephone("Nokia", "N95", 6.12, 3000,
                 7000, "Simbian");
         Telephone samsung = new Telephone("Samsung", "C100", 13.2, 3500,
                 7.110, "Android");
@@ -39,10 +39,6 @@ public class Shop implements CreateTelephone, SellTelephone, AddPhone {
             if(!buyPhone.equals(telephone.getLabel())){
                 tempList.add(telephone);
             }
-            else {
-                System.out.println("Такого телефона нет");
-                break;
-            }
         }
         listTelephone.clear();
         listTelephone.addAll(tempList);
@@ -62,12 +58,19 @@ public class Shop implements CreateTelephone, SellTelephone, AddPhone {
         System.out.println("Введите размер экрана: ");
         double displaySize =  sc.nextDouble();
         System.out.println("Введите емкость батареи: ");
-        int Capacity = sc.nextInt();
+        int capacity = sc.nextInt();
         System.out.println("Введите тип операционной системы: ");
         String os = sc.next();
         System.out.println("Введите стоимость телефона: ");
         double price = sc.nextDouble();
-        sc.close();
+//        sc.close();
+        phone.setLabel(label);
+        phone.setModel(model);
+        phone.setDisplaySize(displaySize);
+        phone.setBatteryCapacity(capacity);
+        phone.setTypeOs(os);
+        phone.setPrice(price);
+        listTelephone.add(phone);
         return listTelephone;
     }
 }

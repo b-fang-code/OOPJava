@@ -12,9 +12,15 @@ public class Main {
         for(Telephone temp:listTelephone){
             System.out.println(temp.toString());
         }
-        shop.sell(listTelephone);
-        for (Telephone temp: listTelephone){
+
+        shop.add(listTelephone);
+        for(Telephone temp:listTelephone){
             System.out.println(temp.toString());
         }
+
+//        shop.sell(listTelephone);
+//        for (Telephone temp: listTelephone){
+//            System.out.println(temp.toString());
+//        }
     }
 }
